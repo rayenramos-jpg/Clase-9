@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>PROYECTOS DE TÍTULO</title>
+        <style>
+          *,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Red+Rose:wght@300..700&display=swap");
+
+:root {
+    --color-oscurisimo: #366ba3;
+    --color-oscuro: #a3368a;
+    --color-normal: #e06eb6;
+    --color-iluminado: pink;
+    --color-iluminadisimo: #d8f0ec;
+    --fuente: "Red Rose", serif;
+}
+
+body {
+    font-family: var(--fuente);
+    color: var(--color-normal);
+    text-align: center;
+    font-size: 100%;
+}
+
+a {
+    color: var(--color-oscuro);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-oscurisimo);
+    text-decoration: underline;
+}
+div#contenedor {
+    margin: 1rem auto;
+    width: 90%;
+    max-width: 980px;
+}
+
+h1 {
+    margin: 1rem 0;
+    font-weight: 400;
+    font-size: calc(100% + 3vw + 3vh);
+}
+
+h2 {
+    margin: 3rem 0;
+    font-weight: 400;
+    letter-spacing: 0.25rem;
+    font-size: calc(100% + 1vw + 1vh);
+    color: var(--color-oscuro);
+}
+
+input {
+    border: 0.1rem solid var(--color-iluminado);
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--color-oscuro);
+    outline: none;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    display: block;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16"><path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/></svg>');
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position: 99% center;
+}
+
+input::placeholder {
+    color: var(--color-iluminado);
+}
+
+input:focus {
+    border-color: var(--color-normal);
+}
+
+div#contenedordetabla {
+    overflow-x: auto;
+    font-size: 90%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>TITULARSE</title>
+        <style>
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            :root {
+                --color-oscurisimo: #222;
+                --color-oscuro: #444;
+                --color-normal: #666;
+                --color-iluminado: #aaa;
+                --color-iluminadisimo: #ddd;
+            }
+
+            body {
+                font-family: Helvetica, Arial, sans-serif;
+                color: var(--color-normal);
+                text-align: left;
+                font-size: 100%;
+            }
+            div#contenedor {
+                margin: 1rem auto 5rem auto;
+                width: 90%;
+                max-width: 720px;
+            }
+
+            h1 {
+                font-weight: 400;
+                font-size: calc(100% + 3vw + 3vh);
+                margin-left:-0.2rem;
+            }
+
+            h2 {
+                margin: 1rem 0 3rem 0;
+                font-weight: 400;
+                letter-spacing: 0.25rem;
+                font-size: calc(100% + 1vw + 1vh);
+                color: var(--color-oscuro);
+            }
+
+            canvas#myChart{
+                margin:3rem 0;
+                background:#eee;
+                padding:1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="contenedor">
+            <h1>Título</h1>
+            <h2>Subtítulo</h2>
+            <p>Un breve texto que explique el origen de lo que sigue</p>
+            <canvas id="myChart"></canvas>
+            <p>Y otro breve texto que invite e reflexionar sobre lo que se presenta arriba.</p>
+        
+		<object data= "viz.svg" type="image/svg+xml"></object>
+		
+		
+		</div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+            new Chart(document.getElementById("myChart"), {
+                type: "bar",
+                data: {
+                    labels: ["Jacob Bustamante S.", "Gabriela Pradenas G.", "Pamela Gatica R.", "Daniel Reyes L.", "Verónica Ode S."],
+                    datasets: [
+                        {
+                            label: "fracaso",
+                            data: [0, 2, 8, 5, 12],
+                            borderWidth: 1,
+                        },
+						{
+                            label: "}exito",
+                            data: [3, 6, 9, 8, 25],
+                            borderWidth: 1,
+							}
+						
+                    ],
+                },
+                options: {
+                    scales: {
+					x:{
+					stacked: true
+					},
+                        y: {
+                            beginAtZero: true,
+							stacked: true
+                        },
+                    },
+                },
+            });
+        </script>
+    </body>
+</html>
